@@ -10,37 +10,49 @@ namespace prog
 
         static void Main(string[] args)
         {
-            Date d1 = new Date(12, 10, 2021);
-            Date d2 = new Date(24, 10, 2022);
-            Date d3 = new Date(24, 10, 2022);
 
-            Console.WriteLine(d1.ToString());
-            Console.WriteLine(d2.ToString());
+            Student st1 = new Student("yazan", "123", 16);
+            Student st2 = new Student("gadir", "456", 15);
+            Student st3 = new Student("ahmad", "1234", 16);
+            Student st4 = new Student("noor", "123456", 18);
+            Student st5 = new Student("mohamad", "012345678", 13);
 
-            d1.SetDay(20);
-            d2.SetMonth(d1.GetMonth());
+            //string className = Console.ReadLine();//اسم الصف
+            StudentList studentList = new StudentList("1103");
 
-            Console.WriteLine(d1.ToString());
-            Console.WriteLine(d2.ToString());
 
-            //    Date d3 = new Date(24, 10, 2022);
+            //current=0
 
-            int value1 = d1.Compare(d2);
-            if (value1==0)
-                Console.WriteLine("Is equals:"+value1);
-            else
-                Console.WriteLine("Is not equals:"+value1);
+            studentList.AddStudent(st1);
+            studentList.AddStudent(st2);
+            studentList.AddStudent(st3);
+            studentList.AddStudent(st4);
+            studentList.AddStudent(st5);
 
-            int value2 = d2.Compare(d3);
-            if (value2 == 0)
-                Console.WriteLine("Is equals:" + value2);
-            else
-                Console.WriteLine("Is not equals:" + value2);
+
+
+            Console.WriteLine(studentList.ToString());
+
+
+
 
             Console.ReadKey();
 
         }
+        public static void Fib(int n)
+        {
+            int temp;
+            int index1 = 0, index2 = 1;
+            while (index1 + index2 <= n)
+            {
+                Console.Write(index1 + ",");
+                temp = index2;
+                index2 = index1 + index2;
+                index1 = temp;
 
+            }
+            Console.Write(index1 + "," + n + "....");
+        }
 
     }
 }

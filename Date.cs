@@ -3,12 +3,10 @@ namespace program1
 {
     public class Date
     {
-
-
         private int day;
         private int month;
         private int year;
-        private int number;
+
         public Date(int day, int month, int year)
         {
             this.day = day;
@@ -16,10 +14,9 @@ namespace program1
             this.year = year;
         }
      
-
+        
         public Date()
         {
-
         }
 
         public int GetDay()
