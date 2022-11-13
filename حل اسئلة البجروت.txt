@@ -1,0 +1,59 @@
+سؤال 2 صيف 2016
+
+أ//
+public Actor(string id,string gender,int numFilms)
+{
+  this.id=id;
+  this.gender=gender;
+  this.numFilms=numFilms;
+}
+//ب
+ 
+ public int Compare(Actor other)
+  {
+    if(this.numFilms>other.numFilms)
+         return 1;
+     else if(this.numFilms<other.numFilms)
+             return 2;
+          return 3;
+   }
+//ج
+   public static void Count(Actor[] arr,int num)//num>0
+    {
+      int count=0;
+      for(int i=0;i<arr.Length;i++)
+        {
+          if(arr[i].GetNumFilms()>num)
+              count++; 
+         }
+      Console.WriteLine(count);
+       }
+
+سؤال 1 صيف 2018
+
+   public int LastOddValue()
+    {
+      for(int i=this.arrayNum.Length-1;i>=0;i--)
+        {
+            if(this.arrayNum[i]%2==1)
+                  return this.arrayNum[i];
+       }
+      return -1;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
